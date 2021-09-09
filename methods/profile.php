@@ -36,7 +36,7 @@
                         case 'fio': unset($usersData[$key]); $usersData[$key]['key'] = 'ФИО'; $usersData[$key]['value'] = $value; break;
                         case 'email': unset($usersData[$key]); $usersData[$key]['key'] = 'Почта'; $usersData[$key]['value'] = $value; break;
                         case 'phone': unset($usersData[$key]); $usersData[$key]['key'] = 'Номер телефона'; $usersData[$key]['value'] = $value; break;
-                        case 'password': unset($usersData[$key]); $usersData[$key]['key'] = 'Пароль'; $usersData[$key]['value'] = "Пароль скрыт!"; break;
+                        case 'password': unset($usersData[$key]); $usersData[$key]['key'] = 'Пароль'; $usersData[$key]['value'] = $value; break;
                         case 'notify':
                             unset($usersData[$key]);
                             $usersData[$key]['key'] = 'Уведомления';
