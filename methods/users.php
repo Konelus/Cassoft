@@ -11,13 +11,15 @@
 
         function login()
         {
-            $result = $this->mysql->select("id","users","(`phone` = '{$_POST['login']}' OR `email` = '{$_POST['login']}') AND `password` = '{$_POST['password']}'","");
+            $password = md5($_POST['password']);
+
+            $result = $this->mysql->select("id","users","(`phone` = '{$_POST['login']}' OR `email` = '{$_POST['login']}') AND `password` = '{$password}'","");
             if ($result)
             {
                 $userID = implode(mysqli_fetch_row($result));
                 $this->mysql->update("users","status","1","`id` = '{$userID}'");
                 setcookie("user","{$userID}");
-                header("Location: /");
+                header("Location: /?page=profile");
             }
         }
 
@@ -43,21 +45,22 @@
                     { $error = true; break; }
                 }
             }
-            //pre($error); exit;
 
             if ($error != true)
             {
                 if ($_POST['notify'] == 'Вкл') { $notify = '1'; }
                 elseif ($_POST['notify'] == 'Выкл') { $notify = '0'; }
 
-                $this->mysql->insert("users","null, '1', '{$_POST['fio']}', '{$_POST['email']}', '{$_POST['phone']}', '{$_POST['password']}', '{$notify}'","");
+                $password = md5($_POST['password']);
+
+                $this->mysql->insert("users","null, '1', '{$_POST['fio']}', '{$_POST['email']}', '{$_POST['phone']}', '{$password}', '{$notify}'","");
                 $userID = implode(mysqli_fetch_row($this->mysql->select("id","users", "`fio` = '{$_POST['fio']}' AND `email` = '{$_POST['email']}' AND `phone` = '{$_POST['phone']}'")));
 
                 $groupID = implode(mysqli_fetch_row($this->mysql->select("id","groups","`name` = 'Зарегистрированный пользователь'")));
                 $this->mysql->insert("groups_compare","null, {$groupID}, {$userID}");
 
                 setcookie("user","{$userID}");
-                header("Location: /");
+                header("Location: /?page=profile");
             }
 
             return $error;

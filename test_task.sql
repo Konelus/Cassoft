@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Сен 09 2021 г., 18:30
+-- Время создания: Сен 09 2021 г., 20:17
 -- Версия сервера: 5.6.38-log
 -- Версия PHP: 7.0.26
 
@@ -88,10 +88,10 @@ INSERT INTO `messages` (`id`, `text`, `title`, `created`, `author`, `recipient`,
 (1, 'text123', 'Заголовок 1', '2021-09-05 03:00:00', 3, 1, 4, 0),
 (2, 'text321', 'Заголовок 2', '2021-09-06 03:00:00', 2, 1, 6, 1),
 (3, 'text321', 'Заголовок 3', '2021-09-06 03:00:00', 2, 1, 8, 1),
-(23, 'test123', 'test task', '2021-09-07 21:43:32', 3, 1, 7, 0),
-(38, 'Кого я обманываю... все знают, что это развод, так что сразу добавлю в папку спам =(', 'Вы выйграли АВТОМОБИЛЬ!', '2021-09-08 23:50:55', 2, 1, 3, 0),
-(39, 'This is the letter', 'the letter', '2021-09-09 13:53:55', 2, 3, 4, 0),
-(40, 'houihlj;lk;k;lk', 'the other letter', '2021-09-09 13:54:11', 2, 1, 1, 0);
+(4, 'test123', 'test task', '2021-09-07 21:43:32', 3, 1, 7, 0),
+(5, 'Кого я обманываю... все знают, что это развод, так что сразу добавлю в папку спам =(', 'Вы выйграли АВТОМОБИЛЬ!', '2021-09-08 23:50:55', 2, 1, 3, 0),
+(6, 'It is my first letter', 'the letter', '2021-09-09 13:53:55', 2, 3, 4, 0),
+(7, 'It is a new letter', 'the other letter', '2021-09-09 13:54:11', 2, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -144,10 +144,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `status`, `fio`, `email`, `phone`, `password`, `notify`) VALUES
-(1, 1, 'user 1', 'user1@test_task.org', '+49 1234 5678901', 'user1', 1),
-(2, 0, 'user 2', '', '+1111', '123', 0),
-(3, 1, 'user 3', '1', '1', '1', 0),
-(13, 0, '6', '6', '6', '6', 0);
+(1, 0, 'user 1', 'user1@test_task.org', '+49 1234 5678901', '24c9e15e52afc47c225b757e7bee1f9d', 1),
+(2, 0, 'user 2', '', '+1111', '202cb962ac59075b964b07152d234b70', 0),
+(3, 0, 'user 3', '1', '1', 'c4ca4238a0b923820dcc509a6f75849b', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -171,7 +170,10 @@ ALTER TABLE `groups_compare`
 -- Индексы таблицы `messages`
 --
 ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `recipient` (`recipient`),
+  ADD KEY `section` (`section`),
+  ADD KEY `status` (`status`);
 
 --
 -- Индексы таблицы `sections`
@@ -199,7 +201,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT для таблицы `groups_compare`
 --
 ALTER TABLE `groups_compare`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`
@@ -217,7 +219,7 @@ ALTER TABLE `sections`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
