@@ -1,0 +1,65 @@
+.main-body {
+  padding: 0;
+}
+.main-body .header {
+  height: 69px;
+  background: #6c757d;
+}
+.main-body .header .notify-count {
+  color: red;
+}
+.main-body .header .nav-div {
+  width: 100%;
+  padding: 5px;
+}
+.main-body .header .nav-div a {
+  text-decoration: none;
+}
+.main-body .header .nav-div a .title {
+  float: left;
+  color: white;
+  font-size: 25px;
+  width: 270px;
+}
+.main-body .header .nav-div a .title img {
+  width: 60px;
+  padding-right: 5px;
+  float: left;
+}
+.main-body .header .nav-div a .title .title-text {
+  margin-top: 9px;
+  float: right;
+}
+.main-body .header .nav-div a .nav-btn {
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px white;
+  background: #343A40;
+  width: 150px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  margin: 8px 8px;
+  float: right;
+}
+.main-body .posts .title,
+.main-body .profile .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0;
+}
+.main-body .profile .title {
+  border-bottom: dotted 1px #6c757d;
+}
+.main-body .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 54px;
+  background: #6c757d;
+  text-align: center;
+  color: white;
+  padding: 2px 0;
+}

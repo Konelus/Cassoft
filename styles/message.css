@@ -1,0 +1,32 @@
+.message {
+  padding-top: 10px;
+}
+.message .content-div {
+  border: solid 1px grey;
+  margin: 10px 0 0 0;
+}
+.message .content-div .col-8 {
+  padding: 0;
+}
+.message .content-div .content {
+  padding: 5px 10px;
+}
+.message .content-div .content-text-div {
+  width: 100%;
+}
+.message .content-div .content-text-div .content-text-title {
+  background: lightgrey;
+  border-bottom: solid 1px grey;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+.message .content-div .col-4 {
+  padding: 0;
+}
+.message .content-div .col-4 .title {
+  font-weight: 600;
+  background: lightgrey;
+  margin: 0;
+  padding: 5px 15px;
+  border-right: solid 1px grey;
+}

@@ -1,0 +1,48 @@
+.profile .data-main-div {
+  border: solid 1px #6c757d;
+  margin: 15px;
+  border-radius: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.profile .data-main-div .data-div {
+  padding: 5px 0 10px 0;
+}
+.profile .data-main-div .data-div .data-row-groups {
+  margin: 5px 0;
+  border: solid 1px lightgrey;
+  padding: 5px;
+}
+.profile .data-main-div .data-div .data-row-groups .row {
+  padding: 0 15px;
+}
+.profile .data-main-div .data-div .data-row-groups .row .col {
+  padding: 5px 20px;
+}
+.profile .data-main-div .data-div .data-row-groups .row .data-key {
+  border-bottom: dotted 1px grey;
+}
+.profile .data-main-div .data-div .data-row,
+.profile .data-main-div .data-div .data-row-groups {
+  padding: 2px 0;
+}
+.profile .data-main-div .data-div .data-row .data-key,
+.profile .data-main-div .data-div .data-row-groups .data-key {
+  font-weight: 600;
+}
+.profile .data-main-div .data-div .data-row .data-value,
+.profile .data-main-div .data-div .data-row-groups .data-value {
+  text-decoration: underline;
+}
+.profile .data-main-div .data-div .exception {
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 600;
+}
+.profile .logout-div {
+  width: 200px;
+  margin: auto;
+}
+.profile .logout-div .btn {
+  width: 100%;
+}
