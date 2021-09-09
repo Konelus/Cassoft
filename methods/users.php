@@ -14,7 +14,7 @@
             $password = md5($_POST['password']);
 
             $result = $this->mysql->select("id","users","(`phone` = '{$_POST['login']}' OR `email` = '{$_POST['login']}') AND `password` = '{$password}'","");
-            if (mysqli_fetch_row($result))
+            if ($result)
             {
                 $userID = implode(mysqli_fetch_row($result));
                 $this->mysql->update("users","status","1","`id` = '{$userID}'");
