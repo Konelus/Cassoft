@@ -1,4 +1,5 @@
 <?php
+    ini_set('display_errors', 0);
     require_once ($_SERVER["DOCUMENT_ROOT"]."/controllers/controller.php");
 ?>
 
