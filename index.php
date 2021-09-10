@@ -10,8 +10,8 @@
         <title>Тестовое задание</title>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="/dist/bootstrap/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/dist/bootstrap/css/bootstrap.min.css">
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/modal.css">
         <link rel="stylesheet" href="/styles/profile.css">
