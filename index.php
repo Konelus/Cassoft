@@ -12,12 +12,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+        <?php if ($_GET['page']) { ?><link rel="stylesheet" href="/styles/<?= $_GET['page'] ?>.css"><?php } ?>
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/modal.css">
-        <link rel="stylesheet" href="/styles/profile.css">
-        <link rel="stylesheet" href="/styles/posts.css">
-        <link rel="stylesheet" href="/styles/add.css">
-        <link rel="stylesheet" href="/styles/message.css">
     </head>
     <body style = 'cursor: default;'>
         <div class = 'container-fluid'>
